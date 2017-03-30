@@ -22,4 +22,4 @@ title "Listing dockers"
 docker ps -a
 
 title "Starting docker + building"
-docker run --rm -v $PWD:/srv/ debian:jessie bash -c "cd /srv/ && ./jenkins/inside_docker.sh"
+#docker run --rm -v $PWD:/srv/ debian:jessie bash -c "cd /srv/ && ./jenkins/inside_docker.sh"
