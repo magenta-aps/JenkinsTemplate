@@ -11,16 +11,18 @@ Getting started is easy:
 
 #. Add :code:`magenta-jenkins` as admin on the repository on GitHub.
 
-#. Add a webhook with:
+    Poke Emil to accept the invite (he has the :code:`magenta-jenkins` user).
 
-   Payload URL:
-    
-   * http://atlas.magenta.dk:PORT/github-webhook/
+#. (Optional) Add build trigger as git push-hook
 
-   Content type:
+Usage
+=====
+After making some code changes, we want an automatic build.
+If the build trigger is added as a git push-hook, all you need to do is push
+to the repository. If a push-hook is not in place; triggering builds can be done
+manually by running the trigger_build script:
 
-   * :code:`application/json`
+.. code:: bash
 
-   No secret, just the :code:`push` event.
+    ./jenkins/trigger_build.sh
 
-   And as active.
