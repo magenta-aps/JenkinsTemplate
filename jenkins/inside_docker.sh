@@ -3,6 +3,8 @@
 function title(){ CHAR='*';CONTENT="$CHAR $* $CHAR";BORDER=$(echo "$CONTENT" | sed "s/./$CHAR/g");echo "";echo "$BORDER";echo "$CONTENT";echo "$BORDER";}
 function subtitle(){ CHAR=' ';CONTENT="$CHAR $* $CHAR";BORDER=$(echo "$CONTENT" | sed "s/./$CHAR/g");echo "";echo "$BORDER";echo "$CONTENT";echo "$BORDER";}
 
+title "Inside docker"
+
 # Switch to the source directory
 # Example:
 #   cd src/
@@ -53,3 +55,4 @@ function subtitle(){ CHAR=' ';CONTENT="$CHAR $* $CHAR";BORDER=$(echo "$CONTENT" 
 # Example:
 #   exit $TRANSLATE_CHECK && $MISSING_I18N_CHECK && ...
 # TODO: Insert something here
+
