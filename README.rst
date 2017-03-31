@@ -19,6 +19,31 @@ Getting started is easy:
 
         echo "http://SERVER_URL:PORT" > jenkins/JENKINS_SERVER_URL
 
+#. Setup build environment and testing inside :code:`jenkins/inside_docker.sh`.
+
+    Jenkins picks up various build results, from within the :code:`reports`
+    subfolder (expected to be generated during build).
+
+    .. code:: console
+
+        jenkins
+        jenkins.sh
+        README.rst
+        reports <-- THIS ONE
+        src
+
+    The files which are expected inside are:
+
+    .. code:: console
+        docs/           <-- HTML documentation to be published (index.html)
+        test/           <-- JUnit XML test report (TEST-*-2017*.xml)
+        coverage.xml    <-- Cobertura XML code coverage report
+        pep8.log        <-- PEP8/Flake8 code checking log
+        pylint.log      <-- Pylint parseable code checking log
+
+    The last two checks are python specific, and can be disabled inside Jenkins
+    job configuration.
+
 #. (Optional) Add build trigger as git push-hook
 
 Usage
