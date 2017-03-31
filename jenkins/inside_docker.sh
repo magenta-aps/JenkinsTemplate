@@ -15,12 +15,14 @@ apt-get update
 apt-get install -y git python2.7 python-pip python-dev
 pip install --upgrade pip
 
+# Setup virtual environment
+title "Setting up virtual environment"
+pip install virtualenv
+virtualenv --python=python2.7 ~/venv
+source ~/venv/bin/activate
+
 # Setup the project
 title "Seeting up project"
-
-pip install virtualenv
-virtualenv --python=2.7 ~/venv/
-source ~/venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 
