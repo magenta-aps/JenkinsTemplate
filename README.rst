@@ -13,6 +13,12 @@ Getting started is easy:
 
     Poke Emil to accept the invite (he has the :code:`magenta-jenkins` user).
 
+#. Create a file containing the Jenkins server url.
+
+    .. code: bash
+
+        echo "http://SERVER_URL:PORT" > jenkins/JENKINS_SERVER_URL
+
 #. (Optional) Add build trigger as git push-hook
 
 Usage
