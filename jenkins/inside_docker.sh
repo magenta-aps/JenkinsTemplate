@@ -18,6 +18,7 @@ pip install --upgrade pip
 # Setup the project
 title "Seeting up project"
 
+pip install virtualenv
 virtualenv --python=2.7 ~/venv/
 source ~/venv/bin/activate
 pip install -r requirements.txt

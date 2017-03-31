@@ -1,7 +1,12 @@
-================
-Jenkins Template
-================
-Example configuration for setting up Jenkins at Magenta ApS.
+=======================
+Django Jenkins Template
+=======================
+Example configuration for django projects running Jenkins at Magenta ApS.
+
+For the non-django setup, see `here`__.
+
+.. _MasterBranch: https://github.com/magenta-aps/JenkinsTemplate/
+__ MasterBranch
 
 Quick Start
 ===========
