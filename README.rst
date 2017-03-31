@@ -35,6 +35,7 @@ Getting started is easy:
     The files which are expected inside are:
 
     .. code:: console
+
         docs/           <-- HTML documentation to be published (index.html)
         test/           <-- JUnit XML test report (TEST-*-2017*.xml)
         coverage.xml    <-- Cobertura XML code coverage report
