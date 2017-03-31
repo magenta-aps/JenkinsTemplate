@@ -1,5 +1,7 @@
-from django.shortcuts import render
+"""Django app views."""
 from django.http import HttpResponse
 
-def index(request):
+
+def index(_):
+    """Index page from which everything happens."""
     return HttpResponse("Hello, world. You're at the app index.")

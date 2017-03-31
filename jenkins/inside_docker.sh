@@ -36,7 +36,7 @@ coverage xml -o ../reports/coverage.xml
 # Lint the code
 title "Checking the code"
 pylint -rn -f parseable app/ | tee ../reports/pylint.log
-flake8 app/ | tee ../reports/pep8.log
+flake8 --exclude */migrations/ app/ | tee ../reports/pep8.log
 
 # Generate documentation
 title "Generating docs"
