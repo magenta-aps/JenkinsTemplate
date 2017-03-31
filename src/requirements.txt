@@ -1,0 +1,11 @@
+-e git+https://github.com/Skeen/coveragepy.git@unexecuted_files_plugin#egg=coverage
+Django==1.10.6
+-e git+https://github.com/Skeen/django_coverage_plugin.git@master#egg=django_coverage_plugin
+flake8==3.3.0
+flake8-docstrings==1.0.3
+pylint-django==0.7.2
+pylint==1.6.5
+Sphinx==1.5.3
+sphinx-rtd-theme==0.2.4
+sphinxcontrib-napoleon==0.6.1
+unittest-xml-reporting==2.1.0

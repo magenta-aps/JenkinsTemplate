@@ -1,0 +1,30 @@
+[run]
+branch = True
+
+plugins =
+    django_coverage_plugin
+
+omit = 
+    # Testing stuff
+    */tests.py
+    */tests/*
+    # Django project stuff
+    manage.py
+    project/*
+    */migrations/*
+    # Python stuff
+    */__init__.py
+    # venv
+    */venv/*
+    # html report
+    htmlcov/*
+    # documentation
+    docs/*
+
+source = .
+
+[report]
+exclude_lines =
+    __str__
+    __unicode__
+    # pragma: no cover
