@@ -15,7 +15,7 @@ Getting started is easy:
 
 #. Create a file containing the Jenkins server url.
 
-    .. code: bash
+    .. code:: bash
 
         echo "http://SERVER_URL:PORT" > jenkins/JENKINS_SERVER_URL
 
