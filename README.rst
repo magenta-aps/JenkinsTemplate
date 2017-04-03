@@ -70,6 +70,8 @@ Getting started is easy:
 
             alias git=$PWD/jenkins/git_replace.sh
 
+    * Using multiple origin push locations
+
 Usage
 =====
 After making some code changes, we want an automatic build.
