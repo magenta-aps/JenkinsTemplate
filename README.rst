@@ -9,15 +9,44 @@ Getting started is easy:
 
 #. Ask our lovely sysadmin for a Jenkins Server with the default configuration.
 
-#. Add :code:`magenta-jenkins` as admin on the repository on GitHub.
+    He will need:
+
+    * Identifiers for the repositories (e.g. JenkinsTemplate)
+    * Homepages for the repositories (e.g. https://github.com/USER/PROJECT)
+    * git urls for the repositories (e.g. git@github.com:USER/PROJECT.git)
+
+    Preferably formatted as:
+
+    .. code:: console
+
+        jenkins_jobs: [{
+            name: "JenkinsTemplate",
+            project_url: "https://github.com/magenta-aps/JenkinsTemplate",
+            project_git: "git@github.com:magenta-aps/JenkinsTemplate.git",
+        },{
+            name: "AnotherRepository",
+            project_url: "https://github.com/magenta-aps/Another",
+            project_git: "git@github.com:magenta-aps/Another.git",
+        }]
+
+#. Add :code:`magenta-jenkins` as admin on the repositories on GitHub.
 
     Poke Emil to accept the invite (he has the :code:`magenta-jenkins` user).
+
+#. Copy the jenkins configuration to the project.
+
+    Namely:
+
+    .. code:: bash
+
+        jenkins.sh
+        jenkins/*
 
 #. Create files containing the Jenkins server url and port.
 
     .. code:: bash
 
-        echo "jenkins.magenta.dk" > jenkins/JENKINS_SERVER_URL
+        echo "jenkins_server_url.magenta.dk" > jenkins/JENKINS_SERVER_URL
         echo "8080" > jenkins/JENKINS_SERVER_PORT
 
 #. Setup build environment and testing inside :code:`jenkins/inside_docker.sh`.
@@ -73,11 +102,19 @@ Getting started is easy:
 
     * Using multiple origin push locations
 
-        While not currently supported on the server side, multiple
-        :code:`origin` urls can be setup, and thus pushing will trigger a
-        server-side script to run, which will in turn trigger the build.
+        *NOTE: Not currently supported on the server side*
+
+        By configuring multiple :code:`origin` urls, one can have a local server
+        trigger the git post-recieve hook, while still pushing the code to
+        GitHub.
+       
+        Such a post-recieve hook, can then be setup to trigger the CI build.
 
         For the work so far, see: :code:`jenkins/install_ci_remote.sh`.
+
+        After having setup the multiple push origins, running the ordinary
+        :code:`git push` will push to both origins, and thus trigger the CI
+        build automatically.
 
 Usage
 =====
