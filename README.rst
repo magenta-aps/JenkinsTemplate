@@ -13,11 +13,12 @@ Getting started is easy:
 
     Poke Emil to accept the invite (he has the :code:`magenta-jenkins` user).
 
-#. Create a file containing the Jenkins server url.
+#. Create files containing the Jenkins server url and port.
 
     .. code:: bash
 
-        echo "http://SERVER_URL:PORT" > jenkins/JENKINS_SERVER_URL
+        echo "jenkins.magenta.dk" > jenkins/JENKINS_SERVER_URL
+        echo "8080" > jenkins/JENKINS_SERVER_PORT
 
 #. Setup build environment and testing inside :code:`jenkins/inside_docker.sh`.
 
@@ -71,6 +72,12 @@ Getting started is easy:
             alias git=$PWD/jenkins/git_replace.sh
 
     * Using multiple origin push locations
+
+        While not currently supported on the server side, multiple
+        :code:`origin` urls can be setup, and thus pushing will trigger a
+        server-side script to run, which will in turn trigger the build.
+
+        For the work so far, see: :code:`jenkins/install_ci_remote.sh`.
 
 Usage
 =====
