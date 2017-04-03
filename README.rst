@@ -45,7 +45,30 @@ Getting started is easy:
     The last two checks are python specific, and can be disabled inside Jenkins
     job configuration.
 
-#. (Optional) Add build trigger as git push-hook
+#. (Optional) Notify Jenkins on :code:`git push` using post-push hook
+
+    As :code:`git` does not support post-push hooks by design, this isn't
+    directly implemented, but rather two alternatives are provided.
+
+    * Using a git command alias.
+
+        By running :code:`jenkins/install_xpush.sh` a command will be added to
+        :code:`.git/config` which can be utilized by running :code:`git xpush`.
+
+        The new command, will do an ordinary :code:`git push`, followed by an
+        invokation of the :code:`jenkins/trigger_build.sh` script.
+
+    * Using a git shell alias.
+
+        The alternative to a git command alias, is a git shell alias, which
+        calls through to git, but triggers Jenkins after :code:`git push`.
+
+        Such a script is provided as :code:`jenkins/git_replace.sh`, and can be
+        registered as an alias in most UNIX shells as;
+
+        .. code::
+
+            alias git=$PWD/jenkins/git_replace.sh
 
 Usage
 =====
