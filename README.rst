@@ -19,15 +19,15 @@ Getting started is easy:
 
     .. code:: console
 
-        jenkins_jobs: [{
-            name: "JenkinsTemplate",
-            project_url: "https://github.com/magenta-aps/JenkinsTemplate",
-            project_git: "git@github.com:magenta-aps/JenkinsTemplate.git",
-        },{
-            name: "AnotherRepository",
-            project_url: "https://github.com/magenta-aps/Another",
-            project_git: "git@github.com:magenta-aps/Another.git",
-        }]
+        jenkins_jobs: 
+          - job:
+                 name: "UBS"
+                 project_url: "https://github.com/magenta-aps/JenkinsTemplate"
+                 project_git: "git@github.com:magenta-aps/JenkinsTemplate.git"
+          - job:
+                 name: "AnotherRepository"
+                 project_url: "https://github.com/magenta-aps/Another"
+                 project_git: "git@github.com:magenta-aps/Another.git"
 
 #. Add :code:`magenta-jenkins` as admin on the repositories on GitHub.
 
