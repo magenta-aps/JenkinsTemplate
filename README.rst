@@ -29,6 +29,8 @@ Getting started is easy:
                  project_url: "https://github.com/magenta-aps/Another"
                  project_git: "git@github.com:magenta-aps/Another.git"
 
+    * Note: name should be a valid UNIX file name *
+
 #. Add :code:`magenta-jenkins` as admin on the repositories on GitHub.
 
     Poke Emil to accept the invite (he has the :code:`magenta-jenkins` user).
