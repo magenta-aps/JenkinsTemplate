@@ -29,7 +29,7 @@ Getting started is easy:
                  project_url: "https://github.com/magenta-aps/Another"
                  project_git: "git@github.com:magenta-aps/Another.git"
 
-    * Note: name should be a valid UNIX file name *
+    * Note: :code:`name` should be a valid UNIX filename *
 
 #. Add :code:`magenta-jenkins` as admin on the repositories on GitHub.
 
