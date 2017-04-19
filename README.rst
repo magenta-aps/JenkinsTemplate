@@ -21,7 +21,7 @@ Getting started is easy:
 
         jenkins_jobs: 
           - job:
-                 name: "UBS"
+                 name: "JenkinsTemplate"
                  project_url: "https://github.com/magenta-aps/JenkinsTemplate"
                  project_git: "git@github.com:magenta-aps/JenkinsTemplate.git"
           - job:
